@@ -1,0 +1,15 @@
+.list {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  gap: 10px;
+  list-style-type: none;
+
+  li{
+    cursor: pointer;
+  }
+
+  li.active {
+    border-bottom: 2px solid rgb(237, 141, 109);
+  }
+}
