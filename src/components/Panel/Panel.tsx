@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import {
   selectAllDirections,
@@ -20,9 +21,18 @@ export const Panel: React.FC = () => {
   const getFilterState = useSelector(selectGetFilterState);
   const selectedValue = useSelector(selectSelectedName);
 
-  const getOptions = getToByName(allFilters, selectedValue);
-  const filteredSendOptions = getFilteredOptions(allDirections, sendFilterState);
-  const filteredGetOptions = getFilteredOptions(getOptions, getFilterState);
+  const getOptions = useMemo(
+    () => getToByName(allFilters, selectedValue),
+    [allFilters, selectedValue],
+  );
+  const filteredSendOptions = useMemo(
+    () => getFilteredOptions(allDirections, sendFilterState),
+    [allDirections, sendFilterState],
+  );
+  const filteredGetOptions = useMemo(
+    () => getFilteredOptions(getOptions, getFilterState),
+    [getOptions, getFilterState],
+  );
 
   return (
     <div className="panel">
