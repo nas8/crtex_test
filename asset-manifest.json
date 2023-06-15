@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/crtex_test/static/css/main.ca7ebc98.css",
+    "main.js": "/crtex_test/static/js/main.50f8a058.js",
+    "index.html": "/crtex_test/index.html",
+    "main.ca7ebc98.css.map": "/crtex_test/static/css/main.ca7ebc98.css.map",
+    "main.50f8a058.js.map": "/crtex_test/static/js/main.50f8a058.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca7ebc98.css",
+    "static/js/main.50f8a058.js"
+  ]
+}
